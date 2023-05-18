@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+    <label for="inac">País de origem: </label>
+    <input type="text" name="nac" id="inac">
+    <input type="submit" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#inac')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Nascido no(a) ${pais.value}.</p>`
+            if (pais.value != 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Gringo!</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
