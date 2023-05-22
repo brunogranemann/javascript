@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header class="cabecalho">
-        <h1 class="cabecalho__titulo">Título</h1>
+        <h1 class="cabecalho__titulo">Vamos contar!</h1>
     </header>
     <main class="cartao">
         <div class="cartao__entrada">
-            Testando...
+            <label for="txtini">Início: </label>
+            <input type="number" name="inicio" id="txtini" required><br>
+            <br>
+            <label for="txtfim">Fim: </label>
+            <input type="number" name="fim" id="txtfim"><br>
+            <br>
+            <label for="txtpas">Passo: </label>
+            <input type="number" name="passo" id="txtpas"><br>
+            <br>
+            <input type="button" value="Contar" onclick="contar()">
         </div>
         <br>
         <div class="cartao__resultado">
-            Olá!
+            Preparando a contagem...
         </div>
     </main>
     <footer class="rodape">
